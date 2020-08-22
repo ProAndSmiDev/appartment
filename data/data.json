@@ -44,6 +44,11 @@
       }
     ]
   },
+  "content": {
+    "mainBlock": {
+      "title": "Гарантировано продадим вашу недвижимость до 10% дороже рыночной цены всего за 21 день по технологии <span>smart sale</span>"
+    }
+  },
   "copyright": {
     "author": "AndSmi",
     "copyright": "Developed by AndSmi"

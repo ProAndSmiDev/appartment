@@ -1,12 +1,15 @@
 section#main.main-block
-    h1.sr-only Космические аппартаменты по космическим ценам
-    .wrapper
-        .slider
-            .swiper-container
-                .swiper-pagination
-                .swiper-wrapper
-                    .swiper-slide(data-count='1')
-                        article.booking-slide
-                            h2.title.__title Живи на луне
-                            p.__desc принципиально новый дизайнерский комплекс особняков премиум-класса, расположенный на Луне, для тех, кто дорого ценит стиль и функциональность
-        a(href="#" title="Забронировать аппартаменты").booking-link Забронировать
+  .wrapper
+    .__left
+      h1.title.main-block__title!= content.mainBlock.title
+      a(href="#").main-block__sales-link Узнать стоимости продажи
+    .__right
+      button.main-block__video-btn(type="button" title="Запустить видео")
+      p.main-block__video-help Узнайте все о нашей компании за <span>60</span> секунд
+    ul.info-list
+      li.__item
+        span Продано недвижимости на 4,5 миллиарда рублей за 7 лет
+      li.__item
+        span Юридическое сопровождение 24/7
+      li.__item
+        span Продажа залоговой/ипотечной недвижимости

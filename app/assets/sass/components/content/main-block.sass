@@ -1,52 +1,102 @@
 .main-block
   height: 929px
   background:
-    position: right center
+    size: 100% 100%
     image: url('../img/bg/main-bg.jpg')
+
   .wrapper
     height: 100%
-    flex-direction: column
-    align-items: flex-start
-
-.booking
-  &-slide
-    width: 370px
-    margin-left: 185px
-    &__title
-      margin-top: 5px
-      margin-bottom: 0
-      font-weight: 700
-      letter-spacing: 18px
-    &__desc
-      margin-top: 7px
-      font-size: 13px
-      font-weight: 300
-      line-height: 19px
-      padding-left: 11px
-      letter-spacing: 1px
-      text-align: justify
-      font-family: 'Open Sans'
-  &-link
-    font-size: 20px
-    font-weight: 700
-    letter-spacing: 4px
-    text-decoration: none
-    border: 1px linear-gradient(131deg, #01b6df 0%, #1d57c4 100%)
-
-.swiper
-  &-slide
     position: relative
-    &:before,
+    align-items: center
+    justify-content: flex-start
+
+    &__left
+      margin-right: 110px
+    &__right
+      display: flex
+      align-items: center
+      flex-direction: column
+
+  &__title
+    max-width: 555px
+    position: relative
+    letter-spacing: -2px
+
+    span
+      color: #e6b87c
+      text-transform: uppercase
+
     &:after
-      position: absolute
-    &:before
-      top: -9px
-      left: 42px
-      content: attr(data-count)
-    &:after
-      left: 0
-      top: -2px
-      width: 32px
-      height: 1px
       content: ''
-      background-color: #fff
+      width: 57px
+      height: 64px
+      right: 165px
+      bottom: -75px
+      display: block
+      position: absolute
+      background-image: url(../img/patterns/arrow-right-to-down.png)
+
+  &__sales-link
+    width: 310px
+    font-size: 15px
+    font-weight: 700
+    margin-top: 80px
+    line-height: 48px
+    text-align: center
+    border-radius: 10px
+    letter-spacing: -1px
+    display: inline-block
+    background-color: #e6b87c
+    border: 1px solid #e6b87c
+    text-transform: uppercase
+    transition: background-color .4s ease-in-out
+    filter: drop-shadow(0 0 10.5px rgba(230,184,124,0.75))
+
+    &:hover
+      background-color: transparent
+
+  &__video
+      &-help
+        color: #fff
+        font-size: 15px
+        max-width: 173px
+        margin-top: 40px
+        line-height: 20px
+        text-align: center
+
+        span
+          font-weight: bold
+      &-btn
+        width: 90px
+        height: 90px
+        border-radius: 50%
+        position: relative
+        border: 1px solid #e6b87c
+        box-shadow: 0 0 70px 0 #e6b87c
+        background-color: rgba(230, 184, 124, .2)
+        background-image: url(../img/patterns/btn-shadow.png)
+
+        &:before
+          top: 50%
+          right: 28px
+          content: ''
+          display: block
+          position: absolute
+          border: 9px solid transparent
+          border-left: 12px solid #fff
+          transform: translateY(-50%)
+
+  .info-list
+    bottom: 95px
+    display: flex
+    list-style: disc
+    position: absolute
+    align-items: flex-start
+    &__item
+      color: #e6b87c
+      max-width: 275px
+      line-height: 20px
+      &:not(:last-child)
+        margin-right: 125px
+      span
+        color: #fff
