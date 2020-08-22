@@ -1,4 +1,49 @@
 {
+  "company": {
+    "logo": {
+      "url": "img/logo.png",
+      "alt": "Логотип компании Bookposki"
+    },
+    "contacts": {
+      "phone": "+7 (499) 638-21-63",
+      "phoneTel": "+84996382163"
+    }
+  },
+  "header": {
+    "adv": "Срочный выкуп и быстрая продажа недвижимости в Москве и МО",
+    "menu": [
+      {
+        "title": "About us",
+        "link": "#about-us",
+        "isActive": true
+      },
+      {
+        "title": "Catalog",
+        "link": "#catalog",
+        "isActive": false
+      },
+      {
+        "title": "Personal area",
+        "link": "#personal-area",
+        "isActive": false
+      },
+      {
+        "title": "New",
+        "link": "#new",
+        "isActive": false
+      },
+      {
+        "title": "Feedback",
+        "link": "#feedback",
+        "isActive": false
+      },
+      {
+        "title": "Contacts",
+        "link": "#contacts",
+        "isActive": false
+      }
+    ]
+  },
   "copyright": {
     "author": "AndSmi",
     "copyright": "Developed by AndSmi"

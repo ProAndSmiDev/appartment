@@ -26,12 +26,11 @@
             top: 0
             left: 0
             content: ''
-            width: 20px
-            height: 3px
+            height: 2px
             display: block
             margin:
               top: 8px
-              left: auto
+              right: auto
             position: absolute
             background-color: #fff
             transition: background-color .4s ease-in-out
@@ -40,8 +39,10 @@
             &:after
               background-color: #060b16
           &:before
+            width: 20px
             transform: rotate(-45deg)
           &:after
+            width: 13px
             transform: rotate(45deg)
     &__bg
       top: 0
@@ -56,42 +57,36 @@
       transition: right .4s ease-in-out
 
     &__burger
-      display: flex
       position: relative
       background-color: transparent
       transition: filter .4s ease-in-out
       &:hover
         filter: invert(25%)
         background-color: transparent
+      span
+        margin:
+          top: 5px
+          bottom: 5px
+          left: auto
+        width: 30px
+        height: 2px
+        display: block
+        background-color: #f6d0a2
 
-      &-wrapper
-        span
-          margin:
-            top: 5px
-            bottom: 5px
-            left: auto
-          width: 24px
-          height: 1px
-          display: block
-          background-color: #fff
+      &:before,
+      &:after
+        content: ''
+        height: 2px
+        display: block
+        margin:
+          right: auto
+        background-color: #f6d0a2
+        transition: transform .4s ease-in-out
 
-        &:before,
-        &:after
-          content: ''
-          width: 16px
-          height: 1px
-          display: block
-          margin:
-            left: auto
-          background-color: #fff
-          transition: transform .4s ease-in-out
-
-      &-title
-        display: none
-        font-size: 18px
-        letter-spacing: 3px
-        color: $default-color
-        text-transform: uppercase
+      &:before
+        width: 30px
+      &:after
+        width: 14px
 
     &-list
       display: flex
@@ -125,5 +120,3 @@
     &__burger
       &-wrapper
         margin-right: 20px
-      &-title
-        display: inline

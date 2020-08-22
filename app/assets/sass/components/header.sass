@@ -8,12 +8,22 @@
     .wrapper
       justify-content: space-between
 
-@include media($width: desktop)
+      &__left,
+      &__right
+        display: flex
+        justify-content: space-between
+
+      &__left
+        align-items: center
+
+      &__right
+        align-items: flex-start
+
+@include media($width: pc)
   header
-    left: 0
-    top: 64px
-    background-color: transparent
+    top: 50px
 
 @import ./header/logo
-
+@import ./header/adv
+@import ./header/contacts
 @import ./header/menu

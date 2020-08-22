@@ -1,6 +1,11 @@
 @import ./variables
 @import ./mixins
 
+
+@include font-family('Open Sans', 'OpenSans', 'OpenSansLight', 300)
+@include font-family('Open Sans', 'OpenSans', 'OpenSansRegular', 400)
+@include font-family('Open Sans', 'OpenSans', 'OpenSansBold', 700)
+
 *,
 *:after,
 *:before
@@ -19,7 +24,12 @@ body
 
 .wrapper
   display: flex
-  width: $wrapper
+  @include media($width: phone)
+    width: $wrapper-phone
+  @include media($width: pc)
+    width: $wrapper-pc
+  @include media($width: desktop)
+    width: $wrapper-desktop
   align-items: center
   flex-flow: row wrap
   justify-content: center
@@ -32,25 +42,7 @@ img
 a
   position: relative
   @include font-styles($color: $default-link)
-  &:before
-    width: 0
-    height: 2px
-    @include pseudo
-    background-color: $default-border-link
-    transition:
-      duration: .4s
-      property: width
-      timing-function: ease-in-out
-  &:hover
-    text-decoration: none
-    &:before
-      width: 100%
-
-input
-  @include input-placeholder
-    @include font-styles($size: $default-placeholder-size, $color: $default-placeholder-color)
-  border: 0
-  background: $bg-default-input
+  text-decoration: none
 
 ul, ol
   display: flex
@@ -89,3 +81,7 @@ input, textarea, select, button
 .title
   @include indents($mb: 20px)
   @include font-styles($size: $default-title-size, $color: $default-title-color)
+
+@import ./components/header
+
+@import ./components/content/main-block

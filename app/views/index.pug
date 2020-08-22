@@ -7,8 +7,12 @@ block SEO
 
 block header
   .wrapper
-    include ../components/header/logo
-    include ../components/header/menu
+    .__left
+      include ../components/header/logo
+      include ../components/header/adv
+    .__right
+      include ../components/header/contacts
+      include ../components/header/menu
 
 block content
   include ../components/content/main-block

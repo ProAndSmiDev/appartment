@@ -1,0 +1,40 @@
+.contacts
+  @include media(phone)
+    display: none
+  @include media(phone-wide)
+    display: flex
+    margin-right: 50px
+  @include media(tablet)
+    margin-right: 67px
+  flex-direction: column
+
+  &__phone
+    line-height: 1
+    text-align: center
+    @include media(tablet)
+      font-size: 21px
+    font-weight: 700
+    letter-spacing: 1px
+    margin-bottom: 13px
+    transition: color .4s ease-in-out
+
+    &:hover
+      color: #f6d0a2
+
+  &__callback-btn
+    color: #fff
+    @include media(phone-wide)
+      padding:
+        top: 3px
+        bottom: 3px
+      width: 170px
+      font-size: 12px
+    @include media(tablet)
+      padding:
+        top: 6px
+        bottom: 6px
+      width: 198px
+      font-size: 14px
+    border-radius: 12px
+    border: 1px solid #f6d0a2
+    background-color: transparent
