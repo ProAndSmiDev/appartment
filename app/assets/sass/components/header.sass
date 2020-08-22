@@ -1,0 +1,19 @@
+@include media($width: phone)
+  header
+    top: 15px
+    z-index: 2
+    width: 100%
+    position: fixed
+
+    .wrapper
+      justify-content: space-between
+
+@include media($width: desktop)
+  header
+    left: 0
+    top: 64px
+    background-color: transparent
+
+@import ./header/logo
+
+@import ./header/menu

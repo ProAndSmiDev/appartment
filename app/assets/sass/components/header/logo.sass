@@ -1,0 +1,17 @@
+@include media($width: phone)
+  .logo
+    transition: filter .4s ease-in-out
+
+    img
+      width: 140px
+
+    &:before
+      display: none
+
+    &:hover
+      filter: invert(25%)
+
+@include media($width: pc)
+  .logo
+    img
+      width: auto

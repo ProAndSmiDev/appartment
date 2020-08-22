@@ -1,0 +1,12 @@
+nav.nav
+    button.__burger(type="button" title="Открыть меню")
+        span.__burger-wrapper
+            span
+        span.__burger-title Меню
+    .__wrapper
+        .__bg
+            ul.nav-list
+                each val in header.menu
+                    li.__item
+                        a(href=val.link).__link= val.title
+            button.__close-btn

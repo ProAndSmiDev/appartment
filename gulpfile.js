@@ -31,7 +31,8 @@ const gulp = require('gulp'),
     'es': root.dev + '/assets/es/**/*.js',
     'fonts': root.dev + '/assets/fonts/**/*',
     'sass': root.dev + '/assets/sass/styles.sass',
-    'img': root.dev + '/assets/img/**/*.{jpg,png,jpeg,gif,svg}',
+    'img': root.dev + '/assets/img/**/*.{jpg,png,jpeg,gif}',
+    'svg': root.dev + '/assets/img/svg/**/*.svg',
   },
   prod = {
     'js': root.prod + '/js',
@@ -155,6 +156,12 @@ addTask('fonts', () => {
     .pipe(ttf2woff2())
     .pipe(gulp.dest(prod.fonts));
 });
+
+addTask('svg', () => {
+  return gulp.src(dev.svg)
+    .pipe(gulp.dest(prod.img + '/icons'));
+});
+
 
 addTask('img', () => {
   return gulp.src(dev.img)

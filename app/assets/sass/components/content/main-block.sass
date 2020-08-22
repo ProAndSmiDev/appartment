@@ -1,0 +1,52 @@
+.main-block
+  height: 800px
+  background:
+    position: right center
+    image: url('../img/main-img/header-bg.png')
+  .wrapper
+    height: 100%
+    flex-direction: column
+    align-items: flex-start
+
+.booking
+  &-slide
+    width: 370px
+    margin-left: 185px
+    &__title
+      margin-top: 5px
+      margin-bottom: 0
+      font-weight: 700
+      letter-spacing: 18px
+    &__desc
+      margin-top: 7px
+      font-size: 13px
+      font-weight: 300
+      line-height: 19px
+      padding-left: 11px
+      letter-spacing: 1px
+      text-align: justify
+      font-family: 'Open Sans'
+  &-link
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 4px
+    text-decoration: none
+    border: 1px linear-gradient(131deg, #01b6df 0%, #1d57c4 100%)
+
+.swiper
+  &-slide
+    position: relative
+    &:before,
+    &:after
+      position: absolute
+    &:before
+      top: -9px
+      left: 42px
+      content: attr(data-count)
+    &:after
+      left: 0
+      top: -2px
+      width: 32px
+      height: 1px
+      content: ''
+      background-color: #fff
