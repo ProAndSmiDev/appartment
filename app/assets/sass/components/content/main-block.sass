@@ -1,5 +1,6 @@
 .main-block
   height: 929px
+  padding-top: 100px
   background:
     size: 100% 100%
     image: url('../img/bg/main-bg.jpg')
@@ -7,45 +8,77 @@
   .wrapper
     height: 100%
     position: relative
+    @include media(phone)
+      flex-direction: column
+      justify-content: flex-start
+    @include media(pc)
+      flex-direction: row
     align-items: center
-    justify-content: flex-start
 
     &__left
-      margin-right: 110px
+      @include media(tablet)
+        margin-right: 110px
     &__right
-      display: flex
+      @include media(phone)
+        display: flex
+        margin-top: 75px
+      @include media(phone-wide)
+        margin-top: 120px
+      @include media(phablet)
+        margin-top: 95px
+      @include media(tablet)
+        margin-top: 80px
+      @include media(pc)
+        margin-top: 0
       align-items: center
       flex-direction: column
 
   &__title
+    @include media(phone)
+      font-size: 24px
+    @include media(phablet)
+      font-size: 28px
+    @include media(tablet)
+      font-size: 35px
     max-width: 555px
-    position: relative
     letter-spacing: -2px
 
     span
       color: #e6b87c
+      position: relative
       text-transform: uppercase
 
-    &:after
-      content: ''
-      width: 57px
-      height: 64px
-      right: 165px
-      bottom: -75px
-      display: block
-      position: absolute
-      background-image: url(../img/patterns/arrow-right-to-down.png)
+      &:after
+        @include media(phone)
+          right: 0
+        @include media(tablet)
+          right: 60px
+        content: ''
+        width: 57px
+        height: 64px
+        bottom: -75px
+        display: block
+        position: absolute
+        background-image: url(../img/patterns/arrow-right-to-down.png)
 
   &__sales-link
-    width: 310px
-    font-size: 15px
+    @include media(phone)
+      width: 240px
+      display: block
+      font-size: 13px
+      line-height: 36px
+      margin: 95px auto 0
+    @include media(phablet)
+      width: 310px
+      font-size: 15px
+      margin: 80px 0 0
+      line-height: 48px
+      display: inline-block
+    height: auto
     font-weight: 700
-    margin-top: 80px
-    line-height: 48px
     text-align: center
     border-radius: 10px
     letter-spacing: -1px
-    display: inline-block
     background-color: #e6b87c
     border: 1px solid #e6b87c
     text-transform: uppercase
@@ -87,16 +120,46 @@
           transform: translateY(-50%)
 
   .info-list
-    bottom: 95px
+    @include media(phone)
+      left: 35px
+      right: 15px
+      bottom: 60px
+      flex-direction: column
+    @include media(phone-wide)
+      left: 0
+      right: 0
+      margin: 0 auto
+      max-width: 385px
+    @include media(tablet)
+      width: 100%
+      bottom: 75px
+      max-width: unset
+      flex-flow: row nowrap
+      justify-content: center
+    @include media(pc)
+      bottom: 95px
+      max-width: 910px
+    @include media(desktop)
+      max-width: unset
     display: flex
     list-style: disc
     position: absolute
     align-items: flex-start
     &__item
+      @include media(tablet)
+        max-width: 160px
+      @include media(pc)
+        max-width: 280px
       color: #e6b87c
-      max-width: 275px
+      font-weight: 300
       line-height: 20px
       &:not(:last-child)
-        margin-right: 125px
+        @include media(phone)
+          margin-bottom: 25px
+        @include media(tablet)
+          margin-bottom: 0
+          margin-right: 75px
+        @include media(pc)
+          margin-right: 125px
       span
         color: #fff
