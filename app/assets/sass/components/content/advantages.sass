@@ -6,6 +6,47 @@
     flex-direction: row
   align-items: center
 
+  &.invert
+    @include media(tablet)
+      flex-direction: row-reverse
+
+    .advantage__info
+      margin-right: 0
+
+    .advantage__view
+      @include media(tablet)
+        margin-right: 30px
+      @include media(pc)
+        margin-right: 160px
+
+  &.joined
+    @include media(pc)
+      position: relative
+
+      .advantage__info
+        margin-right: 0
+        max-width: 580px
+
+      .work-list
+        background:
+          size: 100%
+          repeat: no-repeat
+          image: url('../img/patterns/third-advantages-bg-border.png')
+        padding: 55px
+        height: 498px
+        max-height: 498px
+
+      .advantage__view
+        top: 0
+        width: 410px
+        height: 348px
+        right: -358px
+        position: absolute
+        box-shadow: 0 0 10px 0 gray
+        @include media(desktop)
+          width: auto
+          right: -570px
+
   header
     position: static
 
@@ -111,7 +152,15 @@
 
     &-list
       display: flex
+      align-items: baseline
       flex-direction: column
+
+      &__item
+        &:not(:last-child)
+          @include media(phone)
+            margin-bottom: 160px
+          @include media(tablet)
+            margin-bottom: 240px
 
 .work-list
   @include media(phone)

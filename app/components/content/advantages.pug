@@ -1,21 +1,19 @@
 section#advantages
   .advantages.wrapper
-    h2.title.__title Почему мы продаем недвижимость дорого и в <span>3 раза</span> быстрее <span>99%</span> других агентств
+    h2.title.__title!= content.advantages.title
     ul.advantages-list
-      li.__item
-        article.advantage
-          .__info
-            header
-              h3.__title Собственная база покупателей
-            ul.work-list
-              li.__item
-                p <span>Создаем спрос</span> на объект ещё до размещения его в рекламе
-              li.__item
-                p Используем <span>закрытые базы</span> риэлторов
-              li.__item
-                p Продаем через собственную наработанную базу из <span>7000 клиентов</span>
-            footer
-              p.advantage__specoffer Вы получаете первые предложения о покупке уже <strong>через несколько часов</strong>
-          .__view(data-count="01")
-            img(src="img/advantages/first.jpg" alt="Красивые аппартаменты в солнечную погоду").__pic
-
+      each val, ind in content.advantages.items
+        if(ind !== 0)
+          li.__item
+            article.advantage(class=[val.isInvert === true ? "invert" : undefined, val.isJoin === true ? "joined" : undefined])
+              .__info
+                header
+                  h3.__title!= val.title
+                ul.work-list
+                  each work in val.works
+                    li.__item
+                      p!= work
+                footer
+                  p.advantage__specoffer!= val.specoffer
+              .__view(data-count="0" + ind)
+                img(src=val.view.url alt=val.view.alt).__pic
