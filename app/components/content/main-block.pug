@@ -2,14 +2,14 @@ section#main.main-block
   .wrapper
     .__left
       h1.title.main-block__title!= content.mainBlock.title
-      a(href="#").main-block__sales-link.pulse Узнать стоимости продажи
+      a(href="#").main-block__sales-link.pulse
+        = content.mainBlock.btnText
     .__right
       button.main-block__video-btn(type="button" title="Запустить видео")
-      p.main-block__video-help Узнайте все о нашей компании за <span>60</span> секунд
+      p.main-block__video-help
+        != content.mainBlock.videoTip
     ul.info-list
-      li.__item
-        span Продано недвижимости на 4,5 миллиарда рублей за 7 лет
-      li.__item
-        span Юридическое сопровождение 24/7
-      li.__item
-        span Продажа залоговой/ипотечной недвижимости
+      each val in content.mainBlock.salesInfo
+        li.__item
+          span
+            = val.text
