@@ -1,0 +1,64 @@
+.get-price
+  height: 885px
+  max-height: 885px
+  &__wrapper
+    @include media(phone)
+      width: 100%
+    @include media(phone-wide)
+      width: 343px
+    display: flex
+    @include media(tablet)
+      margin-right: auto
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+
+  &__title
+    line-height: 48px
+    margin-bottom: 35px
+    letter-spacing: -2px
+
+  &__desc
+    color: #fff
+    font-size: 22px
+    line-height: 28px
+    padding-right: 25px
+    letter-spacing: -1px
+    margin-bottom: 135px
+
+    span
+      color: #e6b87c
+      font-weight: 800
+      &.arrow
+        position: relative
+        &:before
+          content: ''
+          width: 35px
+          right: -57px
+          height: 112px
+          bottom: -100px
+          display: block
+          position: absolute
+          background-image: url(../img/patterns/get-price-arrow.png)
+
+  &__questions-link
+    @include media(phone)
+      width: 100%
+    @include media(phone-wide)
+      width: 344px
+    font-size: 15px
+    padding: 20px 0
+    font-weight: 800
+    text-align: center
+    border-radius: 10px
+    background-color: #e6b87c
+    border: 1px solid #e6b87c
+    text-transform: uppercase
+    transition: background-color .4s ease-in-out
+    filter: drop-shadow(0 0 10.5px rgba(230,184,124,0.75))
+    &:hover
+      background-color: transparent
+
+  &-bg
+    background:
+      image: url(../img/bg/get-price-bg.jpg)
