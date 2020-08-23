@@ -1,0 +1,9 @@
+section#estate-sale.estate-sale-bg
+  .estate-sale.wrapper
+    h2.title.__title!= content.estateSale.title
+    p.__desc!= content.estateSale.desc
+    ul.work-list
+      each reason in content.estateSale.reasons
+        li.__item
+          p= reason
+    a(href="#").__sale-link Продать недвижимость дорого
