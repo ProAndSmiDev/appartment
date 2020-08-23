@@ -20,11 +20,13 @@
           right: 210px
           bottom: 10px
           position: absolute
+          background-color: transparent
 
           &:before,
           &:after
             top: 0
             left: 0
+            width: 20px
             content: ''
             height: 2px
             display: block
@@ -37,12 +39,10 @@
           &:hover
             &:before,
             &:after
-              background-color: #060b16
+              background-color: #6c4e25
           &:before
-            width: 20px
             transform: rotate(-45deg)
           &:after
-            width: 13px
             transform: rotate(45deg)
     &__bg
       top: 0
@@ -53,7 +53,7 @@
       max-width: 240px
       position: absolute
       padding-bottom: 35px
-      background-color: #00658c
+      background-color: #9d7035
       transition: right .4s ease-in-out
 
     &__burger
@@ -110,7 +110,7 @@
         border: 1px solid #fff
         transition: background-color .4s ease-in-out
         &:hover
-          background-color: #004e6b
+          background-color: #6c4e25
 
         &:before
           display: none

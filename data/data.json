@@ -13,33 +13,28 @@
     "adv": "Срочный выкуп и быстрая продажа недвижимости в Москве и МО",
     "menu": [
       {
-        "title": "About us",
-        "link": "#about-us",
+        "title": "Главная",
+        "link": "#main",
         "isActive": true
       },
       {
-        "title": "Catalog",
-        "link": "#catalog",
+        "title": "Преимущества",
+        "link": "#advantages",
         "isActive": false
       },
       {
-        "title": "Personal area",
-        "link": "#personal-area",
+        "title": "Узнать стоимость",
+        "link": "#get-price",
         "isActive": false
       },
       {
-        "title": "New",
-        "link": "#new",
+        "title": "Продажа недвижимости",
+        "link": "#estate-sale",
         "isActive": false
       },
       {
-        "title": "Feedback",
-        "link": "#feedback",
-        "isActive": false
-      },
-      {
-        "title": "Contacts",
-        "link": "#contacts",
+        "title": "Что-то",
+        "link": "#more-one",
         "isActive": false
       }
     ]
